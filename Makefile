@@ -25,7 +25,7 @@ PHP_BIN ?= php
 
 install:
 	composer install
-	npm install
+	make build
 
 build:
 	npm install
