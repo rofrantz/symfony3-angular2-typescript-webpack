@@ -23,6 +23,10 @@ PHP_BIN ?= php
 
 .SILENT:
 
+install:
+	composer install
+	npm install
+
 build:
 	npm install
 	bin/console hshn:npm:instal

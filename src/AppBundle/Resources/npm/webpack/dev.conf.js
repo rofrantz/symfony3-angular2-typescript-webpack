@@ -5,7 +5,8 @@ const config = require('./conf.js');
 
 module.exports = webpackMerge(config, {
     debug: true,
-    devtool: 'cheap-module-eval-source-map',
+    //devtool: 'cheap-module-eval-source-map',
+    devtool: 'cheap-source-map',
     output: {
         path: path.resolve(__dirname, '../../public/assets'),
         pathinfo: true,
