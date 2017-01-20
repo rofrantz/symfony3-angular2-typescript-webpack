@@ -14,8 +14,6 @@ First clone the repository from Git
 git clone https://github.com/rofrantz/symfony3-angular2-typescript-webpack
 ```
 
-# Usage
-
 ## w/Makefile
 ```bash
 make install
@@ -28,3 +26,13 @@ Make sure you have [Vagrant](https://www.vagrantup.com/docs/installation/) and [
 ```bash
 vagrant up
 ```
+
+# Usage
+
+Start the application
+
+```bash
+make launch
+```
+
+Access it on your browser on http://localhost:8000

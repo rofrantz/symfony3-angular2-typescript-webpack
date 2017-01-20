@@ -4,6 +4,8 @@
 #     make target1 [ target2 ... ]                                      #
 #                                                                       #
 #   Targets:                                                            #
+#     install: Installs the application                                 #
+#     launch: Launches the webserver on port 8080                       #
 #     build: Removes all cache and log files                            #
 #     clear: Removes all cache and log files                            #
 #     config: Generates Symfony2 parameters.yml file                    #
@@ -32,6 +34,9 @@ build:
 	bin/console hshn:npm:instal
 	bin/console hshn:npm:run build
 	composer up
+
+launch:
+	bin/console server:start localhost:8000 --force
 
 clear:
 	rm -rf build/ var/cache/ var/logs/ var/sessions \
