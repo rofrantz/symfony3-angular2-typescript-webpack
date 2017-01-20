@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <my-app>Loading transpiled AppComponent source content here ...</my-app>
+{% endblock %}
+
+{% block javascripts %}
+    {% javascripts 'bundles/app/assets/*.js' %}
+    <script src="generated{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}

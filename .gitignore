@@ -1,0 +1,26 @@
+# PHPStorm
+.idea/
+
+/app/config/parameters.yml
+/build/
+/phpunit.xml
+/var/*
+!/var/cache
+/var/cache/*
+!var/cache/.gitkeep
+!/var/logs
+/var/logs/*
+!var/logs/.gitkeep
+!/var/sessions
+/var/sessions/*
+!var/sessions/.gitkeep
+!var/SymfonyRequirements.php
+/vendor/
+/web/bundles/
+/src/AppBundle/Resources/npm/node_modules/
+/node_modules/
+/var/logs/
+/var/sessions/
+/web/generated/
+/var/cache/
+/src/AppBundle/Resources/public/assets/

@@ -1,0 +1,38 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "Proof of concept",
+  "main": "main.js",
+  "scripts": {
+    "build": "webpack --config webpack.conf.js --progress --profile --colors --display-error-details --display-cached",
+    "build:prod": "npm run build --production",
+    "watch": "npm run build -- --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "~2.4.0",
+    "@angular/compiler": "~2.4.0",
+    "@angular/core": "~2.4.0",
+    "@angular/forms": "~2.4.0",
+    "@angular/http": "~2.4.0",
+    "@angular/platform-browser": "~2.4.0",
+    "@angular/platform-browser-dynamic": "~2.4.0",
+    "@angular/router": "~3.4.0",
+
+    "awesome-typescript-loader": "^3.0.0-beta.18",
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.9",
+    "rxjs": "5.0.1",
+    "source-map-loader": "^0.1.6",
+    "typescript": "^2.1.5",
+    "webpack": "^1.14.0",
+    "webpack-merge": "^2.4.0",
+    "zone.js": "^0.7.4"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.46"
+  },
+  "repository": {}
+}
