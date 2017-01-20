@@ -4,7 +4,7 @@
   "description": "Proof of concept",
   "main": "main.js",
   "scripts": {
-    "build": "webpack --config webpack.conf.js --progress --profile --colors --display-error-details --display-cached",
+    "build": "webpack --config webpack.conf.js --profile --colors --display-error-details --display-cached",
     "build:prod": "npm run build --production",
     "watch": "npm run build -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
