@@ -39,7 +39,7 @@ launch:
 	bin/console server:start localhost:8000 --force
 
 clean:
-	rm -rf build/ var/cache/ var/logs/ var/sessions \
+	rm -rf build/ var/cache/* var/logs/ var/sessions \
 	node_modules/ src/AppBundle/Resources/npm/node_modules/ \
 	web/generated \
 	src/AppBundle/Resources/public/assets
