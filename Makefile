@@ -33,7 +33,7 @@ build:
 	npm install
 	bin/console hshn:npm:instal
 	bin/console hshn:npm:run build
-	composer up
+	composer install
 
 launch:
 	bin/console server:start localhost:8000 --force
@@ -44,7 +44,7 @@ clean:
 	web/generated \
 	src/AppBundle/Resources/public/assets
 
-config: clear
+config:
 	cp app/config/parameters.yml.dist app/config/parameters.yml
 
 composer: config
@@ -78,6 +78,6 @@ test-functional:
 
 test:
 	echo "################### $(g) TESTS  ###################"
-	$(PHP_BIN) bin/phpunit $(phpunit_options) tests
+	$(PHP_BIN) phpunit $(phpunit_options) tests
 
 .PHONY: clear config composer test-unit test-functional test sonar
