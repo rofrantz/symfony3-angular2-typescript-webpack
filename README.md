@@ -21,7 +21,9 @@ make install
 
 ## w/Vagrant & ansible
 
-Make sure you have [Vagrant](https://www.vagrantup.com/docs/installation/) and [ansible](http://docs.ansible.com/ansible/intro_installation.html) installed
+Make sure you have [Vagrant](https://www.vagrantup.com/docs/installation/) and [ansible](http://docs.ansible.com/ansible/intro_installation.html) installed.
+
+@TODO
 
 ```bash
 vagrant up
