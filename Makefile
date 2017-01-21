@@ -38,10 +38,11 @@ build:
 launch:
 	bin/console server:start localhost:8000 --force
 
-clear:
+clean:
 	rm -rf build/ var/cache/ var/logs/ var/sessions \
 	node_modules/ src/AppBundle/Resources/npm/node_modules/ \
-	web/generated
+	web/generated \
+	src/AppBundle/Resources/public/assets
 
 config: clear
 	cp app/config/parameters.yml.dist app/config/parameters.yml
