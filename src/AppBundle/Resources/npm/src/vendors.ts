@@ -1,5 +1,7 @@
-import 'core-js/es6';
-require('zone.js/dist/zone');
+import 'es6-shim';
+
+import 'reflect-metadata';
+import 'zone.js/dist/zone';
 
 if (process.env.ENV === 'production') {
     // Production
@@ -8,3 +10,7 @@ if (process.env.ENV === 'production') {
     Error['stackTraceLimit'] = Infinity;
     require('zone.js/dist/long-stack-trace-zone');
 }
+
+import '@angular/platform-browser';
+
+import 'rxjs';

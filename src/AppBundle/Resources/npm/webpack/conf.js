@@ -6,9 +6,8 @@ const rootDir = path.resolve(__dirname, '..');
 module.exports = {
     cache: true,
     entry: {
-        'app': ['main'],
-        /*'vendor': ['vendor']/*,
-        'polyfills': ['polyfills']*/
+        'app': [path.resolve(rootDir, 'src', 'bootstrap')],
+        'vendors': [path.resolve(rootDir, 'src', 'vendors')]
     },
     resolve: {
         extensions: ['', '.ts', '.js'],
@@ -23,24 +22,10 @@ module.exports = {
             }
         ]
     },
-    preLoaders: [
-        {
-            test: /\.js$/,
-            loader: 'source-map-loader'
-        }
-    ],
     plugins: [
-        new webpack.optimize.OccurenceOrderPlugin(true),
-        new webpack.NoErrorsPlugin()/*,
         new webpack.optimize.CommonsChunkPlugin({
-            name: "vendor",
-
-            // filename: "vendor.js"
-            // (Give the chunk a different name)
-
+            name: "vendors",
             minChunks: Infinity
-            // (with more entries, this ensures that no other module
-            //  goes into the vendor chunk)
-        })*/
+        })
     ]
 };

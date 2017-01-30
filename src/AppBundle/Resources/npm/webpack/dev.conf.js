@@ -7,9 +7,9 @@ module.exports = webpackMerge(config, {
     debug: true,
     devtool: 'cheap-source-map',
     output: {
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, '../../public/assets'),
         pathinfo: true,
-        filename: '[name].js',
         sourceMapFilename: '[file].map',
         chunkFilename: '[id].chunk.js'
     }
