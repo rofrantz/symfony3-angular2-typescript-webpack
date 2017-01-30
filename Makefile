@@ -35,13 +35,19 @@ build:
 	bin/console hshn:npm:run build
 	composer install
 
+build-prod:
+	npm install
+	bin/console hshn:npm:instal
+	bin/console hshn:npm:run build:prod
+	composer install
+
 launch:
 	bin/console server:start localhost:8000 --force
 
 clean:
 	rm -rf build/ var/cache/* var/logs/ var/sessions \
 	node_modules/ src/AppBundle/Resources/npm/node_modules/ \
-	web/generated \
+	web/bundles \
 	src/AppBundle/Resources/public/assets
 
 config:

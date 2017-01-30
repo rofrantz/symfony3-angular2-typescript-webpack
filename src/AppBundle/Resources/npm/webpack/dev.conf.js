@@ -7,10 +7,12 @@ module.exports = webpackMerge(config, {
     debug: true,
     devtool: 'cheap-source-map',
     output: {
-        filename: '[name].bundle.js',
-        path: path.resolve(__dirname, '../../public/assets'),
-        pathinfo: true,
-        sourceMapFilename: '[file].map',
-        chunkFilename: '[id].chunk.js'
-    }
+        pathinfo: true
+    },
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "vendors",
+            minChunks: Infinity
+        })
+    ]
 });

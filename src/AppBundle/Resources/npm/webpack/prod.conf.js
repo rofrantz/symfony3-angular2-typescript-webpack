@@ -4,15 +4,11 @@ const path = require('path');
 
 const config = require('./conf.js');
 
+const rootDir = path.resolve(__dirname, '..');
+
 module.exports = webpackMerge.smart(config, {
     debug: false,
     devtool: 'source-map',
-    output: {
-        path: path.resolve(__dirname, '../../public/assets'),
-        filename: '[name].js',
-        sourceMapFilename: '[file].map',
-        chunkFilename: '[id].chunk.js'
-    },
     plugins: [
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({

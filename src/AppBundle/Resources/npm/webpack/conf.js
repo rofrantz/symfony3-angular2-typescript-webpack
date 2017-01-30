@@ -11,6 +11,12 @@ module.exports = {
         "app": [path.resolve(rootDir, 'src', 'bootstrap')],
         "vendors": [path.resolve(rootDir, 'src', 'vendors')]
     },
+    output: {
+        path: path.resolve(__dirname, '../../public/assets'),
+        filename: '[name].bundle.js',
+        sourceMapFilename: '[file].map',
+        chunkFilename: '[id].chunk.js'
+    },
     resolve: {
         extensions: ['', '.ts', '.js'],
         root: path.resolve(rootDir, 'src'),
@@ -23,11 +29,5 @@ module.exports = {
                 loader: 'awesome-typescript-loader'
             }
         ]
-    },
-    plugins: [
-        new webpack.optimize.CommonsChunkPlugin({
-            name: "vendors",
-            minChunks: Infinity
-        })
-    ]
+    }
 };
