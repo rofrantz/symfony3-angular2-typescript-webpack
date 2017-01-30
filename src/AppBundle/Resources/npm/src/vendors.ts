@@ -12,5 +12,6 @@ if (process.env.ENV === 'production') {
 }
 
 import '@angular/platform-browser';
+import '@angular/platform-browser-dynamic';
 
 import 'rxjs';
