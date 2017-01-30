@@ -39,12 +39,6 @@ twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
 
-# Assetic Configuration
-assetic:
-    debug:          "%kernel.debug%"
-    use_controller: false
-    write_to: "%kernel.root_dir%/../web/generated/"
-
 hshn_npm:
     bin: "%kernel.root_dir%/../node_modules/.bin/npm"
     bundles:

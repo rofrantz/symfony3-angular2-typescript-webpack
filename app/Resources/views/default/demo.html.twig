@@ -5,8 +5,5 @@
 {% endblock %}
 
 {% block javascripts %}
-    {#{% javascripts 'bundles/app/assets/*.js' %}#}
-    {% javascripts 'bundles/app/assets/app.js' %}
-    <script src="generated{{ asset_url }}"></script>
-    {% endjavascripts %}
+    <script src="{{ asset('bundles/app/assets/app.js') }}"></script>
 {% endblock %}

@@ -9,7 +9,6 @@ class AppKernel extends Kernel
     {
         $bundles = [
             new Hshn\NpmBundle\HshnNpmBundle(),
-            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
