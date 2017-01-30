@@ -1,13 +1,15 @@
-const webpack = require('webpack');
+'use strict';
+
 const path = require('path');
+const webpack = require('webpack');
 
 const rootDir = path.resolve(__dirname, '..');
 
 module.exports = {
     cache: true,
     entry: {
-        'app': [path.resolve(rootDir, 'src', 'bootstrap')],
-        'vendors': [path.resolve(rootDir, 'src', 'vendors')]
+        "app": [path.resolve(rootDir, 'src', 'bootstrap')],
+        "vendors": [path.resolve(rootDir, 'src', 'vendors')]
     },
     resolve: {
         extensions: ['', '.ts', '.js'],
