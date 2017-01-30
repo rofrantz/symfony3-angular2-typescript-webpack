@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
 
+const rootDir = path.resolve(__dirname, '..');
+
 module.exports = {
     cache: true,
     entry: {
@@ -10,7 +12,7 @@ module.exports = {
     },
     resolve: {
         extensions: ['', '.ts', '.js'],
-        root: path.resolve(__dirname, '../src'),
+        root: path.resolve(rootDir, 'src'),
         modulesDirectories: ['node_modules']
     },
     module: {
